@@ -15,10 +15,12 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Favicon (has to be favicon.ico) -->
-    <link rel="icon" type="image/png" href="">
+    <link rel="icon" type="image/png" href="assets/favicon.ico">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="all.min.css" />
+    <link rel="stylesheet" href="style.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <!-- JS -->
@@ -27,13 +29,117 @@
 </head>
 
 <body>
+    <!-- Top Scroll -->
+    <span id="top"></span>
 
+    <!-- Wrapper -->
+    <div class="main-wrapper">
+        <!-- Nav -->
+        <div class="nav main-nav">
+            <div class="logo"><a href="index.html"><img src="assets/logo.png"></a>
+            </div>
+            <!-- <span class="nav-title">
+                aprille perez
+            </span> -->
+            <div class="menu-button"><i class="fas fa-bars"></i></div>
+        </div>
+
+        <!-- Hero Headline -->
+        <div class="headline">
+            <h1>curious, creative, collaborative</h1>
+        </div>
+
+        <!-- Hero Image -->
+        <div class="hero-image">
+            <img src="https://wallpaperaccess.com/full/2641074.gif">
+        </div>
+
+        <!-- About -->
+        <div class="about" id="about">
+            <div class="headline">
+                <h1 data-aos="fade-up">hi, i'm aprille</h1>
+            </div>
+
+            <p data-aos="fade-up">a designer first with a focus in UX, and a developer with an interest in front-end. i enjoy thinking of ways to improve experiences through data, empathy, and story-telling. 6 years of professional experience with interdisciplinary design, and working knowledge of front-end development. i especially value a space to learn, grow, and innovate. but being able to hang is also a plus.</p>
+            <p data-aos="fade-up"><strong>design specialties:</strong> ux/ui, graphic, digital, web, video, print, illustration</p>
+            <p data-aos="fade-up"><strong>development specialties:</strong> html, css, javascript, jQuery, react, git</p>
+            <p data-aos="fade-up"><strong>applications:</strong> sketch, adobe creative suite, VS code, jira, google suite</p>
+            <p data-aos="fade-up">outside of work you'll find me tinkering with film photography, engaging in foodie endeavors, and discovering music throughout the decades.</p>
+        </div>
+
+        <!-- Projects -->
+        <div class="project-wrapper" id="projects">
+            <h4>project 1</h4>
+            <h4>project 2</h4>
+            <h4>project 3</h4>
+            <h4>project 4</h4>
+        </div>
+
+    </div><!-- Wrapper END -->
+
+    <!-- Contact -->
+    <div class="contact-wrapper" id="contact">
+        <span class="contact-title">
+            <h1>connect with me</h1>
+        </span>
+        <div class="social-media">
+            <h1><a href="mailto:aprillesakura@gmail.com"><i class="far fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/aprilleperez/"><i class="fab fa-linkedin-in"></i></a></h1>
+        </div>
+        <span class="other-links">
+            <p>or <span><a href="https://www.linkedin.com/in/aprilleperez/">see other things i do</a></span></p>
+        </span>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>aprille perez © 2020</p>
+        </div>
+    </div>
+
+    <!-- "Top" Button -->
+    <a href="#top" id="back-to-top" class="back-to-top" style="display: inline;">top</a>
 
 
     <!-- AOS init -->
     <script>
         AOS.init();
     </script>
+
+    <!-- "Top" Button Scroll -->
+    <script>
+        var link = document.getElementById("back-to-top");
+        var amountScrolled = 250;
+
+        function addClass(el, className) {
+            if (el.classList) {
+                el.classList.add(className);
+            } else {
+                el.className += ' ' + className;
+            }
+        }
+
+        function removeClass(el, className) {
+            if (el.classList)
+                el.classList.remove(className);
+            else
+                el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+        }
+
+        window.addEventListener('scroll', function (e) {
+            if (window.scrollY > amountScrolled) {
+                addClass(link, 'show');
+            } else {
+                removeClass(link, 'show');
+            }
+        });
+
+        $('#back-to-top').click(function (event) {
+            $('html,body').animate({
+                scrollTop: $("#top").offset().top
+            }, 'slow');
+        });
+    </script>
+
 </body>
 
 </html>
