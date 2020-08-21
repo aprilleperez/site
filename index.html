@@ -34,19 +34,29 @@
 
     <!-- Wrapper -->
     <div class="main-wrapper">
+        <span class="nav-title">
+            aprille perez
+        </span>
+       
         <!-- Nav -->
         <div class="nav main-nav">
             <div class="logo"><a href="index.html"><img src="assets/logo.png"></a>
             </div>
-            <!-- <span class="nav-title">
-                aprille perez
-            </span> -->
+    
             <div class="menu-button"><i class="fas fa-bars"></i></div>
+            <div class="close-button"><i class="fas fa-bars"></i></div>
+
+            <div class="nav-items">
+                    <a href="#about">about</a>
+                    <a href="#projects">projects</a>
+                    <a href="#contact">contact</a>
+            </div>
         </div>
 
         <!-- Hero Headline -->
-        <div class="headline">
-            <h1>curious, creative, collaborative</h1>
+        <div class="headline" data-aos="zoom-in">
+            <!-- <h1>curious, creative, collaborative</h1> -->
+            <h1>blah blah blah</h1>
         </div>
 
         <!-- Hero Image -->
@@ -55,16 +65,16 @@
         </div>
 
         <!-- About -->
-        <div class="about" id="about">
+        <div class="about" id="about" data-aos="fade-down">
             <div class="headline">
-                <h1 data-aos="fade-up">hi, i'm aprille</h1>
+                <h1>hi, i'm aprille</h1>
             </div>
 
-            <p data-aos="fade-up">a designer first with a focus in UX, and a developer with an interest in front-end. i enjoy thinking of ways to improve experiences through data, empathy, and story-telling. 6 years of professional experience with interdisciplinary design, and working knowledge of front-end development. i especially value a space to learn, grow, and innovate. but being able to hang is also a plus.</p>
-            <p data-aos="fade-up"><strong>design specialties:</strong> ux/ui, graphic, digital, web, video, print, illustration</p>
-            <p data-aos="fade-up"><strong>development specialties:</strong> html, css, javascript, jQuery, react, git</p>
-            <p data-aos="fade-up"><strong>applications:</strong> sketch, adobe creative suite, VS code, jira, google suite</p>
-            <p data-aos="fade-up">outside of work you'll find me tinkering with film photography, engaging in foodie endeavors, and discovering music throughout the decades.</p>
+            <p>a designer first with a focus in UX, and a developer with an interest in front-end. i enjoy thinking of ways to improve experiences through data, empathy, and story-telling. 6 years of professional experience with interdisciplinary design, and working knowledge of front-end development. i especially value a space to learn, grow, and innovate. but being able to hang is also a plus.</p>
+            <p><strong>design specialties:</strong> ux/ui, graphic, digital, web, video, print, illustration</p>
+            <p><strong>development specialties:</strong> html, css, javascript, jQuery, react, git</p>
+            <p><strong>applications:</strong> sketch, adobe creative suite, VS code, jira, google suite</p>
+            <p>outside of work you'll find me tinkering with film photography, engaging in foodie endeavors, and discovering music throughout the decades.</p>
         </div>
 
         <!-- Projects -->
@@ -78,7 +88,7 @@
     </div><!-- Wrapper END -->
 
     <!-- Contact -->
-    <div class="contact-wrapper" id="contact">
+    <div class="contact-wrapper" id="contact" data-aos="fade-down">
         <span class="contact-title">
             <h1>connect with me</h1>
         </span>
@@ -101,12 +111,12 @@
 
 
     <!-- AOS init -->
-    <script>
+    <script type="text/javascript">
         AOS.init();
     </script>
 
     <!-- "Top" Button Scroll -->
-    <script>
+    <script type="text/javascript">
         var link = document.getElementById("back-to-top");
         var amountScrolled = 250;
 
@@ -138,6 +148,20 @@
                 scrollTop: $("#top").offset().top
             }, 'slow');
         });
+
+        // const menuButton = document.getElementsByClassName("menu-button");
+        // const closeButton = document.getElementsByClassName("close-button");
+        // const navItems = document.getElementsByClassName("nav-items");
+
+    </script>
+
+    <script type="text/javascript">
+        $('.menu-button').click(function (event) {
+        // $('html,body').animate({
+        //     scrollTop: $("#top").offset().top
+        // }, 'slow');
+        alert('clicked');
+    });
     </script>
 
 </body>
